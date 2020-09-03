@@ -13,6 +13,8 @@
 		820E0ADD25010A6800233022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820E0ADC25010A6800233022 /* Assets.xcassets */; };
 		820E0AE025010A6800233022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820E0ADE25010A6800233022 /* LaunchScreen.storyboard */; };
 		820E0AE825010B1000233022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820E0AE725010B1000233022 /* Main.storyboard */; };
+		82A47F1325016B69007C29A8 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 82A47F1225016B69007C29A8 /* TweetSentimentClassifier.mlmodel */; };
+		82A47F1525016C54007C29A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A47F1425016C54007C29A8 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		820E0ADF25010A6800233022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820E0AE125010A6800233022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		820E0AE725010B1000233022 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		82A47F1225016B69007C29A8 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
+		82A47F1425016C54007C29A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				820E0AD525010A6500233022 /* SceneDelegate.swift */,
 				820E0AD725010A6500233022 /* ViewController.swift */,
 				820E0AE725010B1000233022 /* Main.storyboard */,
+				82A47F1425016C54007C29A8 /* Constants.swift */,
+				82A47F1225016B69007C29A8 /* TweetSentimentClassifier.mlmodel */,
 				820E0ADC25010A6800233022 /* Assets.xcassets */,
 				820E0ADE25010A6800233022 /* LaunchScreen.storyboard */,
 				820E0AE125010A6800233022 /* Info.plist */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A47F1525016C54007C29A8 /* Constants.swift in Sources */,
 				820E0AD825010A6500233022 /* ViewController.swift in Sources */,
 				820E0AD425010A6500233022 /* AppDelegate.swift in Sources */,
+				82A47F1325016B69007C29A8 /* TweetSentimentClassifier.mlmodel in Sources */,
 				820E0AD625010A6500233022 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
