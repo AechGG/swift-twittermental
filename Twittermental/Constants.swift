@@ -9,6 +9,6 @@
 import Foundation
 
 struct K {
-    let TWITTER_API_CONSUMER_KEY = "";
-    let TWITTER_API_CONSUMER_SECRET = "";
+    static let TWITTER_CONSUMER_KEY = "";
+    static let TWITTER_CONSUMER_SECRET = "";
 }
