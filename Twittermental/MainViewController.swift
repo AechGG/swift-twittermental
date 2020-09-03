@@ -34,55 +34,61 @@ class MainViewController: UIViewController {
     }
     
     private func getSentiment(_ text: String) {
-        swifter.searchTweet(using: text, lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
+        swifter.searchTweet(using: text, lang: K.TWITTER_LANG, count: K.TWITTER_TWEET_COUNT, tweetMode: .extended, success: { (results, metadata) in
             
             var tweets = [TweetSentimentClassifierInput]();
             
-            for i in 0..<100 {
+            for i in 0..<K.TWITTER_TWEET_COUNT {
                 if let tweet = results[i]["full_text"].string {
                     let tweetType = TweetSentimentClassifierInput(text: tweet);
                     tweets.append(tweetType);
                 }
             }
             
-            do {
-                let predictions = try self.sentimentClassifier.predictions(inputs: tweets);
-                
-                var sentimentScore = 0;
-                
-                for pred in predictions {
-                    let sentiment = pred.label;
-                    if sentiment == "Pos" {
-                        sentimentScore += 1
-                    } else if sentiment == "Neg" {
-                        sentimentScore -= 1;
-                    }
-                }
-                
-                if sentimentScore > 20 {
-                    self.sentimentLabel.text = "😍";
-                } else if sentimentScore > 10 {
-                    self.sentimentLabel.text = "😀";
-                } else if sentimentScore > 0 {
-                    self.sentimentLabel.text = "🙂";
-                } else if sentimentScore == 0 {
-                    self.sentimentLabel.text = "😐";
-                } else if sentimentScore > -10 {
-                    self.sentimentLabel.text = "🙁";
-                } else if sentimentScore > -20 {
-                    self.sentimentLabel.text = "😡";
-                } else {
-                    self.sentimentLabel.text = "🤮";
-                }
-                
-            } catch {
-                print("Error carrying out prediction \(error)");
-            }
-            
-            
+            self.makePrediction(tweets);
             
         }) { (error) in
             print("Error retrieving tweets: \(error)")
+        }
+    }
+    
+    private func makePrediction(_ tweets: [TweetSentimentClassifierInput]) {
+        do {
+            let predictions = try self.sentimentClassifier.predictions(inputs: tweets);
+            
+            var sentimentScore = 0;
+            
+            for pred in predictions {
+                let sentiment = pred.label;
+                if sentiment == "Pos" {
+                    sentimentScore += 1
+                } else if sentiment == "Neg" {
+                    sentimentScore -= 1;
+                }
+            }
+            
+            self.setSentimentLabel(sentimentScore);
+            
+        } catch {
+            print("Error carrying out prediction \(error)");
+        }
+    }
+    
+    private func setSentimentLabel(_ sentimentScore: Int) {
+        if sentimentScore > 20 {
+            self.sentimentLabel.text = "😍";
+        } else if sentimentScore > 10 {
+            self.sentimentLabel.text = "😀";
+        } else if sentimentScore > 0 {
+            self.sentimentLabel.text = "🙂";
+        } else if sentimentScore == 0 {
+            self.sentimentLabel.text = "😐";
+        } else if sentimentScore > -10 {
+            self.sentimentLabel.text = "🙁";
+        } else if sentimentScore > -20 {
+            self.sentimentLabel.text = "😡";
+        } else {
+            self.sentimentLabel.text = "🤮";
         }
     }
     

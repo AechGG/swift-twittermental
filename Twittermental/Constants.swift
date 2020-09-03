@@ -11,4 +11,6 @@ import Foundation
 struct K {
     static let TWITTER_CONSUMER_KEY = "";
     static let TWITTER_CONSUMER_SECRET = "";
+    static let TWITTER_TWEET_COUNT = 100;
+    static let TWITTER_LANG = "en";
 }
