@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		63D99ECAA311EE7F3F240A14 /* Pods_Twittermental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4699C2BA9E7C994D0C0473A /* Pods_Twittermental.framework */; };
 		820E0AD425010A6500233022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820E0AD325010A6500233022 /* AppDelegate.swift */; };
 		820E0AD625010A6500233022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820E0AD525010A6500233022 /* SceneDelegate.swift */; };
-		820E0AD825010A6500233022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820E0AD725010A6500233022 /* ViewController.swift */; };
+		820E0AD825010A6500233022 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820E0AD725010A6500233022 /* MainViewController.swift */; };
 		820E0ADD25010A6800233022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820E0ADC25010A6800233022 /* Assets.xcassets */; };
 		820E0AE025010A6800233022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820E0ADE25010A6800233022 /* LaunchScreen.storyboard */; };
 		820E0AE825010B1000233022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820E0AE725010B1000233022 /* Main.storyboard */; };
@@ -77,7 +77,7 @@
 		820E0AD025010A6500233022 /* Twittermental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittermental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		820E0AD325010A6500233022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		820E0AD525010A6500233022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		820E0AD725010A6500233022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		820E0AD725010A6500233022 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		820E0ADC25010A6800233022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820E0ADF25010A6800233022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820E0AE125010A6800233022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +108,6 @@
 				02055715D064865A7FB61376 /* Pods-Twittermental.debug.xcconfig */,
 				BF66A979D01FA0DB6DB32A55 /* Pods-Twittermental.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,7 +135,7 @@
 			children = (
 				820E0AD325010A6500233022 /* AppDelegate.swift */,
 				820E0AD525010A6500233022 /* SceneDelegate.swift */,
-				820E0AD725010A6500233022 /* ViewController.swift */,
+				820E0AD725010A6500233022 /* MainViewController.swift */,
 				820E0AE725010B1000233022 /* Main.storyboard */,
 				82A47F1425016C54007C29A8 /* Constants.swift */,
 				82A47F1225016B69007C29A8 /* TweetSentimentClassifier.mlmodel */,
@@ -328,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A47F1525016C54007C29A8 /* Constants.swift in Sources */,
-				820E0AD825010A6500233022 /* ViewController.swift in Sources */,
+				820E0AD825010A6500233022 /* MainViewController.swift in Sources */,
 				820E0AD425010A6500233022 /* AppDelegate.swift in Sources */,
 				82A47F1325016B69007C29A8 /* TweetSentimentClassifier.mlmodel in Sources */,
 				820E0AD625010A6500233022 /* SceneDelegate.swift in Sources */,

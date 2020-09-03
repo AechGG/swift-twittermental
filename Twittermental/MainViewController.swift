@@ -13,10 +13,12 @@ import SwiftyJSON
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var inputTextField: UITextField!
+    
     @IBOutlet weak var sentimentLabel: UILabel!
+    @IBOutlet weak var inputTextField: UITextField!
     
     let sentimentClassifier = TweetSentimentClassifier();
+
     
     var swifter = Swifter(consumerKey: K.TWITTER_CONSUMER_KEY, consumerSecret: K.TWITTER_CONSUMER_SECRET);
     
@@ -30,7 +32,7 @@ class MainViewController: UIViewController {
             getSentiment(searchText);
         }
     }
-     
+    
     private func getSentiment(_ text: String) {
         swifter.searchTweet(using: text, lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
             
