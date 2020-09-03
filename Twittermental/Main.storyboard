@@ -46,7 +46,7 @@
                                                     <color key="titleColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="predictPressed:" destination="gJu-1w-wsk" eventType="touchUpInside" id="uRJ-Qv-1Rf"/>
+                                                    <action selector="predictPressed:" destination="gJu-1w-wsk" eventType="touchUpInside" id="8d5-xl-eVY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -76,7 +76,8 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="jwa-r8-Fd9" id="5UJ-WU-hbt"/>
-                        <outlet property="sentimentLabel" destination="Ep9-2h-KsB" id="RGg-ER-dLz"/>
+                        <outlet property="inputTextField" destination="HP9-ee-vOF" id="FyW-Ul-KaY"/>
+                        <outlet property="sentimentLabel" destination="Ep9-2h-KsB" id="BZQ-eg-NJg"/>
                         <outlet property="textField" destination="HP9-ee-vOF" id="eKD-X0-T0H"/>
                     </connections>
                 </viewController>
